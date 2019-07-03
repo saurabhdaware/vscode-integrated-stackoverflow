@@ -1,0 +1,62 @@
+body{
+    color:#ddd;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+button{
+    border:none;
+    background-color:#999;
+    color:#111;
+    padding:5px 7px;
+    font-weight:bold;
+    cursor: pointer;
+}
+a{
+    color:#09f;
+    opacity:.7;
+    text-decoration:none;
+    border-bottom:1px solid #09f;
+}
+pre{
+    color:inherit;
+    background-color:#22222299;
+    color:#aaa;
+    display:block;
+    position:relative;
+}
+pre > code{
+    display:block;
+    overflow-x:scroll;
+    padding:10px;
+}
+::-webkit-scrollbar{width:1px;height:1px;}
+::-webkit-scrollbar-thumb{background-color:#09f;}
+h2{
+    color:#09f;
+}
+.shadow{
+    box-shadow: 0 8px 6px -6px black;
+}
+.card{
+    background-color:#111;
+    color:#fff;
+    padding:20px;
+    margin:20px 0px;
+    position:relative;
+    border:1px solid #09f;
+}
+.content-220499{
+    position: absolute;
+    top:0;right:0;
+    background-color:#09f;
+    color:#fff;
+    border:none;
+    font-size:9pt;
+    box-shadow: 0px 10px 10px -6px black;
+}
+.blue-button{
+    background-color: #09f;
+    color:#fff;
+}
+input{
+    outline:none;
+}
