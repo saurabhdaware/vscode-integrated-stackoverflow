@@ -10,19 +10,20 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld",
 		"onCommand:extension.soView"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			},
+		"keybindings":[
 			{
 				"command": "extension.soView",
-				"title": "Open StackOverflow View"
+				"key": "ctrl+k s"
+			}
+		],
+		"commands": [
+			{
+				"command": "extension.soView",
+				"title": "Open StackOverflow Search"
 			}
 		]
 	},

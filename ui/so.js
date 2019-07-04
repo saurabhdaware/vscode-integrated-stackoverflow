@@ -1,12 +1,6 @@
 let searchbar = document.getElementById('search');
 searchbar.focus();
-navigator.clipboard.readText()
-    .then(text => {
-        searchbar.placeholder = text;
-    })
-    .catch(err => {
-        console.error('Failed to read clipboard contents: ', err);
-    });
+
 
 const copyToClipboard = str => {
     const el = document.createElement('textarea');
