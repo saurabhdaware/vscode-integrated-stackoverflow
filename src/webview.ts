@@ -6,7 +6,7 @@ const html = `
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Integrated Stackoverflow Search</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../ui/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/saurabhdaware/vscode-integrated-stackoverflow/ui/style.css">
     </head>
     <body>
         <div style="padding:20px;">
@@ -19,7 +19,7 @@ const html = `
 
             </div>
         </div>
-        <script src="../ui/so.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/saurabhdaware/vscode-integrated-stackoverflow/ui/so.js"></script>
     </body>
 </html>
 `;

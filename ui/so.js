@@ -1,3 +1,13 @@
+let searchbar = document.getElementById('search');
+searchbar.focus();
+navigator.clipboard.readText()
+    .then(text => {
+        searchbar.placeholder = text;
+    })
+    .catch(err => {
+        console.error('Failed to read clipboard contents: ', err);
+    });
+
 const copyToClipboard = str => {
     const el = document.createElement('textarea');
     el.value = str;
@@ -32,7 +42,9 @@ function viewAnswer(el){
         .then(data => {
             document.querySelector(".answer-container-"+el.dataset.index).innerHTML = data.items[0].body;
         })
-        .then(() => el.innerHTML = '')
+        .then(() =>{ 
+            el.style.display = 'none';
+        })
         .then(renderCopyButtons);        
 }
 
@@ -47,6 +59,13 @@ function createQuestionsCard(questions){
 }
 
 async function searchAnswers(){
+    if(!searchbar.value){
+        if(searchbar.placeholder !== 'Search for your error..'){
+            searchbar.value = searchbar.placeholder;
+        }else{
+            searchbar.value = '';
+        }
+    }
     document.getElementById("answers").innerHTML = '';
     let searchQuery = document.querySelector('input#search').value;
     searchQuery = searchQuery.trim().replace(/ /g,'+');
