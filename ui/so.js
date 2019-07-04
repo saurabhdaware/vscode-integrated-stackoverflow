@@ -63,7 +63,7 @@ async function searchAnswers(){
     document.getElementById("answers").innerHTML = '';
     let searchQuery = document.querySelector('input#search').value;
     searchQuery = searchQuery.trim().replace(/ /g,'+');
-    let data = await fetch('https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=votes&q='+searchQuery+'&answers=1&site=stackoverflow')
+    let data = await fetch('https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=relevance&q='+searchQuery+'&answers=1&site=stackoverflow')
     let questions = (await data.json()).items;
 
     questions = questions.map(question => ({title:question.title,link:question.link,id:question.question_id}));
