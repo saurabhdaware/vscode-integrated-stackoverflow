@@ -19,11 +19,12 @@ a{
 pre{
     color:inherit;
     background-color:#22222299;
-    color:#aaa;
+    color:#aaa !important;
     display:block;
     position:relative;
 }
 pre > code{
+    color:#999 !important;
     display:block;
     overflow-x:scroll;
     padding:10px;
@@ -42,7 +43,7 @@ h2{
     padding:20px;
     margin:20px 0px;
     position:relative;
-    border:1px solid #09f;
+    border:1px solid #000;
 }
 .content-220499{
     position: absolute;

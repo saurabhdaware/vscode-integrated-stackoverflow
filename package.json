@@ -1,8 +1,30 @@
 {
 	"name": "integrated-stackoverflow",
 	"displayName": "Integrated Stackoverflow",
-	"description": "Get stackoverflow answers right into your text editor and search for your error solutions easily",
-	"version": "0.0.1",
+	"description": "Get stackoverflow answers right into your text editor and search for solutions easily",
+	"version": "1.0.0",
+	"publisher": "saurabh",
+	"author": {
+		"name": "saurabhdaware"
+	},
+	"icon": "ui/logo-512.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/saurabhdaware/vscode-integrated-stackoverflow.git"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/saurabhdaware/vscode-integrated-stackoverflow/blob/master/README.md",
+	"bugs": {
+		"url": "https://github.com/saurabhdaware/vscode-integrated-stackoverflow/issues",
+		"email": "saurabhdaware99@gmail.com"
+	},
+	"keywords": [
+		"Stackoverflow",
+		"Integrated Stackoverflow",
+		"Search Bugs",
+		"Bugs",
+		"Stackoverflow answers"
+	],
 	"engines": {
 		"vscode": "^1.35.0"
 	},
