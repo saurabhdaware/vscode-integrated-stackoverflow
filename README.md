@@ -1,65 +1,41 @@
-# integrated-stackoverflow README
+# <i style='color:#09f;background-color:#000;padding:5px 10px;border:1px solid #09f;'>?</i> Integrated Stackoverflow
 
-This is the README for your extension "integrated-stackoverflow". After writing up a brief description, we recommend including the following sections.
+Get stackoverflow answers right into your text editor and search for solutions easily. 
 
-## Features
+Just press ***`CTRL + K S`*** to open search bar into your text editor and search for your error
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+[![Current version of Integrated Stackoverflow](https://vsmarketplacebadge.apphb.com/version-short/saurabh.integrated-stackoverflow.svg)](https://marketplace.visualstudio.com/items?itemName=saurabh.integrated-stackoverflow) [![Downloads](https://vsmarketplacebadge.apphb.com/downloads/saurabh.integrated-stackoverflow.svg)](https://marketplace.visualstudio.com/items?itemName=saurabh.integrated-stackoverflow) [![Rating](https://vsmarketplacebadge.apphb.com/rating-short/saurabh.integrated-stackoverflow.svg)](https://marketplace.visualstudio.com/items?itemName=saurabh.integrated-stackoverflow)
 
-For example if there is an image subfolder under your extension project workspace:
+<a href="https://marketplace.visualstudio.com/items?itemName=saurabh.integrated-stackoverflow" style="color:#ddd;font-size:10pt;background:#333;padding:10px 14px;border:1px solid #000;">Visit Marketplace</a>
 
-\!\[feature X\]\(images/feature-x.png\)
+## Usage
+Press ***`CTRL + K S`*** to open stackoverflow searchbar, Paste/Type your error and press enter.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## Requirements
+## Snapshots
+![](screenshots/ss1.png)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Contribution
+- Check for the issues on https://github.com/saurabhdaware/vscode-integrated-stackoverflow/issues
+- Fork the project
+- Finish your changes and make Pull Request to Master branch of https://github.com/saurabhdaware/vscode-integrated-stackoverflow
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Local Development
+- Fork this project
+- `git clone https://github.com/{your username}/vscode-integrated-stackoverflow`
+- `cd vscode-integrated-stackoverflow`
+- `npm install`
+- Open the project in Visual Studio Code and press `Ctrl + f5` to start Extension host.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 1.0.x
 
-### 1.0.0
+Initial Release of Integrated Stackoverflow and Minor Updates. 
 
-Initial release of ...
 
-### 1.0.1
+----
 
-Fixed issue #.
+***Dont forget to star my github repository https://github.com/saurabhdaware/vscode-integrated-stackoverflow***
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+***Enjoy 🎉***
