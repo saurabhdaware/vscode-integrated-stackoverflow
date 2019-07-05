@@ -2,7 +2,7 @@
 	"name": "integrated-stackoverflow",
 	"displayName": "Integrated Stackoverflow",
 	"description": "Get stackoverflow answers right into your text editor and search for solutions easily",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "saurabh",
 	"author": {
 		"name": "saurabhdaware"
