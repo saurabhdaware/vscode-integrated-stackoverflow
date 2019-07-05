@@ -27,6 +27,10 @@ pre > code{
     display:block;
     overflow-x:scroll;
     padding:10px;
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+code{
+    font-family: 'Roboto Condensed', sans-serif;
 }
 ::-webkit-scrollbar{width:1px;height:1px;}
 ::-webkit-scrollbar-thumb{background-color:#09f;}
@@ -50,14 +54,16 @@ h2{
     color:#fff;
     border:none;
     font-size:9pt;
-    box-shadow: 0px 10px 10px -6px black;
+    box-shadow:-3px 3px 10px 1px #111;
 }
 .blue-button{
     background-color: #09f;
     color:#fff;
+    outline:none !important;
 }
 input{
-    outline:none;
+    outline:none !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
 }
 .pad-20{
     padding:20px;
