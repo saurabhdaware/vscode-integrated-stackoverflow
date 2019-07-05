@@ -39,7 +39,6 @@ h2{
 .card{
     background-color:#111;
     color:#fff;
-    padding:20px;
     margin:20px 0px;
     position:relative;
     border:1px solid #000;
@@ -59,4 +58,14 @@ h2{
 }
 input{
     outline:none;
+}
+.pad-20{
+    padding:20px;
+}
+.question-wrapper{
+    background-color:#13141d;
+    padding:20px;
+}
+.question-wrapper pre > code{
+    background-color:#222;
 }

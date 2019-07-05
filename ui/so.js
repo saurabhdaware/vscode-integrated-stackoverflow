@@ -24,20 +24,25 @@ function createAnswerCard(answers,question){
     let ans = answers.slice(0,2);
     let cards = '';
     for(let i in ans){
-        cards += '<div class="shadow card"> <h2>Q:' + question.title + '</h2> <span style="position:absolute;top:5px;left:10px;font-size:20pt;opacity:.1;font-weight:bold;color:#ddd;">' + (Number(i)+1) +'</span>'+ ans[i].body + '</div>';
+        cards += '<div class="shadow card"><div class="question-wrapper"><a target="_blank" href="'+question.link+'"><h2>Q: '+question.title+'</h2></a>'+question.body+' <span style="position:absolute;top:5px;left:10px;font-size:20pt;opacity:.1;font-weight:bold;color:#ddd;">' + (Number(i)+1) +'</span></div><div class="pad-20">'+ ans[i].body + '</div></div>';
     }
     return cards;
 }
-
+function hideAnswer(el){
+    document.querySelector(".answer-container-"+el.dataset.index).innerHTML = '';
+    el.innerHTML = 'View Answer';
+    el.onclick = () => viewAnswer(el);
+}
 function viewAnswer(el){
     el.innerHTML = 'Loading answer';
     fetch('https://api.stackexchange.com/2.2/questions/'+el.dataset.questionid+'/answers?order=desc&sort=votes&site=stackoverflow&filter=withbody')
         .then(response => response.json())
         .then(data => {
-            document.querySelector(".answer-container-"+el.dataset.index).innerHTML = data.items[0].body;
+            document.querySelector(".answer-container-"+el.dataset.index).innerHTML = '<h2>Answer:</h2>'+data.items[0].body;
         })
         .then(() =>{ 
-            el.style.display = 'none';
+            el.innerHTML = 'Hide Answer'
+            el.onclick = () => hideAnswer(el);
         })
         .then(renderCopyButtons);        
 }
@@ -46,7 +51,7 @@ function createQuestionsCard(questions){
     let cards = '<h2>Other Questions</h2>';
     let i = 0;
     for(let question of questions.slice(1)){
-        cards += '<div class="shadow card"><h2>'+question.title+'</h2><button data-questionid="'+ question.id +'" data-index="'+i+'" class="blue-button" onclick="viewAnswer(this)">View Answer</button><div class="answer-container-'+i+'"></div></div>';
+        cards += '<div class="shadow card"><div class="question-wrapper"><a target="_blank" href="'+question.link+'"><h2>'+question.title+'</h2></a>'+question.body+'</div><div class="pad-20"><button data-questionid="'+ question.id +'" data-index="'+i+'" class="blue-button" onclick="viewAnswer(this)">View Answer</button><div class="answer-container-'+i+'"></div></div></div>';
         i++;
     }
     return cards;
@@ -63,10 +68,10 @@ async function searchAnswers(){
     document.getElementById("answers").innerHTML = '';
     let searchQuery = document.querySelector('input#search').value;
     searchQuery = searchQuery.trim().replace(/ /g,'+');
-    let data = await fetch('https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=relevance&q='+searchQuery+'&answers=1&site=stackoverflow')
+    let data = await fetch('https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=relevance&q='+searchQuery+'&answers=1&site=stackoverflow&filter=withbody')
     let questions = (await data.json()).items;
 
-    questions = questions.map(question => ({title:question.title,link:question.link,id:question.question_id}));
+    questions = questions.map(question => ({title:question.title,link:question.link,id:question.question_id,body:question.body}));
     fetch('https://api.stackexchange.com/2.2/questions/'+questions[0].id+'/answers?order=desc&sort=votes&site=stackoverflow&filter=withbody')
         .then(response => response.json())
         .then(data => {

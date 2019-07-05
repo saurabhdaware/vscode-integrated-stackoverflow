@@ -6,8 +6,8 @@ const html = `
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Integrated Stackoverflow Search</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/saurabhdaware/vscode-integrated-stackoverflow@master/ui/style.css">
-        <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/saurabhdaware/vscode-integrated-stackoverflow@master/ui/logo-192.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/saurabhdaware/vscode-integrated-stackoverflow@latest/ui/style.css">
+        <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/saurabhdaware/vscode-integrated-stackoverflow@latest/ui/logo-192.png" type="image/x-icon">
     </head>
     <body>
         <div style="padding:20px;">
@@ -20,7 +20,7 @@ const html = `
 
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/gh/saurabhdaware/vscode-integrated-stackoverflow@master/ui/so.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/saurabhdaware/vscode-integrated-stackoverflow@latest/ui/so.js"></script>
     </body>
 </html>
 `;
