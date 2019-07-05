@@ -15,6 +15,8 @@ Press ***`CTRL + K S`*** to open stackoverflow searchbar, Paste/Type your error 
 ## Snapshots
 ![](screenshots/ss1.png)
 
+![](screenshots/vid.gif)
+
 ## Contribution
 - Check for the issues on https://github.com/saurabhdaware/vscode-integrated-stackoverflow/issues
 - Fork the project
